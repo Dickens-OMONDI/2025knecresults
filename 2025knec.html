@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNEC Student Portal</title>
+  <link rel="stylesheet" href="2025knec.css">
+</head>
+<body>
+  <div class="container">
+    <h1>KNEC Portal</h1>
+    <form id="studentForm">
+      <label for="index">Index Number:</label>
+      <input type="text" id="index" placeholder="e.g. 427015001" required>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" placeholder="Enter Full Name" required>
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <div id="resultsSection" class="hidden">
+    <div class="print-watermark">KNEC CONFIDENTIAL</div>
+
+    <h2>KCSE Examination Results</h2>
+    <div id="studentInfo"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Subject</th>
+          <th>Grade</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody id="resultsTable"></tbody>
+    </table>
+
+    <p><strong>Mean Grade:</strong> <span id="meanGrade"></span></p>
+    <button onclick="window.print()">Print</button>
+    <button id="logoutBtn">Logout</button>
+  </div>
+
+  <script src="2025knec.js"></script>
+</body>
+</html>
